@@ -5,7 +5,7 @@ const express = require('express');
 
 const app = express();
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 80;
 
 app.use(express.static('public'));
 app.use(express.json());
