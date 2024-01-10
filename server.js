@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('./db/db.json');
 const express = require('express');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     const newNote = req.body
+    newNote.id = uuidv4()
     db.push(newNote)
     fs.writeFileSync('./db/db.json', JSON.stringify(db))
     res.json(db)
