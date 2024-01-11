@@ -12,6 +12,7 @@
   * [License](#license)
   * [Contact](#contact)
 
+  ![Alt text](Screenshot.png)
   
   ## Installation
 
